@@ -9,16 +9,21 @@ const ProductDetails = () => {
   const route = useRoute();
   
   const productDataFromRoute = route.params as {product : ProductType};
-  const { title, description, image } = productDataFromRoute.product
+  const { title, description, image, price, rating } = productDataFromRoute.product
 
   const { } = useProductDetails();
-  const { container, productImage } = styles;
+  const { productContainer, productImage, productTitle, productDescription, productBottomInfoContainer,productPrice,productRating } = styles;
 
   return (
-    <View style={container}>
+    <View style={productContainer}>
       <Image style={productImage} source={{uri : image}} />
-      <Text>{ title }</Text>
-      <Text>{ description }</Text>
+      <Text style={productTitle}>{ title }</Text>
+      <Text style={productDescription}>{ description }</Text>
+      
+      <View style={productBottomInfoContainer}>
+        <Text style={productPrice}>{price}</Text>
+        <Text style={productRating}>{rating}</Text>
+      </View>
     </View>
   );
 };

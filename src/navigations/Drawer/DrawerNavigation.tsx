@@ -13,14 +13,13 @@ const DrawerNavigator = () => {
 
         <Drawer.Navigator
                 screenOptions={{
-                    headerShown: false,
-                    title: 'Ürünler',
+                    headerShown: false
                 }}
             >
 
-            <Drawer.Screen name= {StackNames.bottomNavBarStack} component={BottomNavBarStack} />
-            <Drawer.Screen name= {Scenes.products} component={Products} />
-            <Drawer.Screen name= {Scenes.profile} component={Profile} />
+            <Drawer.Screen name= {StackNames.bottomNavBarStack} component={BottomNavBarStack} options={{ title: 'Ana Sayfa' }}  />
+            <Drawer.Screen name= {Scenes.products} component={Products} options={{ title: 'Ürünler' }}  />
+            <Drawer.Screen name= {Scenes.profile} component={Profile} options={{ title: 'Profil' }}  />
 
         </Drawer.Navigator>
 

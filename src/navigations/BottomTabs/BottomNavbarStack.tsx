@@ -64,6 +64,4 @@ const BottomNavBarStack = () => {
 
 }
 
-
-
 export default BottomNavBarStack;
