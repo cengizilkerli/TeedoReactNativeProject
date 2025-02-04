@@ -8,9 +8,14 @@ const ProfileStack = () => {
 
     return (
 
-        <ProfileStackNavigator.Navigator>
+        <ProfileStackNavigator.Navigator 
+            screenOptions={{ title: 'Profilim'}}
+            >
 
-            <ProfileStackNavigator.Screen name= {Scenes.profile} component= { Profile } />
+            <ProfileStackNavigator.Screen 
+                name= {Scenes.profile} 
+                component= { Profile } 
+                />
 
         </ProfileStackNavigator.Navigator>
 
@@ -18,4 +23,4 @@ const ProfileStack = () => {
 
 }
 
-export default 
+export default ProfileStack;

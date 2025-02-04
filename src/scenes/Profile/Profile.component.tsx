@@ -1,15 +1,20 @@
 import { View, Text } from 'react-native';
-
-import useProfile from './hooks/useProfile.hook';
+import styles from './Profile.style';
 
 const Profile = () => {
-  const { count, setCount } = useProfile();
+  
+  const { container } = styles;
 
   return (
-    <View>
+
+    <View style={container}>
+    
       <Text>Profile</Text>
+    
     </View>
+
   );
+
 };
 
 export default Profile;

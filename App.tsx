@@ -19,11 +19,10 @@ export default function App() {
         <StatusBar style={'auto' as StatusBarStyle} />
 
         <NavigationContainer
-          ref={navigatorRef => {
-            navigationRef.current = navigatorRef;
-          }}
-        >
+            ref={navigatorRef => { navigationRef.current = navigatorRef; }} >
+        
           <AppNavigator />
+        
         </NavigationContainer>
 
       </SafeAreaProvider>
