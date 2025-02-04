@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import styles from './Products.style';
 import useProducts from './hooks/useProducts.hook';
 
-const Home = () => {
+const Products = () => {
   const { } = useProducts();
   const { container } = styles;
 
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Products;

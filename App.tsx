@@ -1,15 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import Products from '_scenes/Products/Products.component';
-import { SafeAreaView } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler'; 
+import { StatusBar, StatusBarStyle } from 'expo-status-bar';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 
+import AppNavigator from '_navigations/AppNavigator';
 import './gesture-handler';
 
 export default function App() {
 
+  const navigationRef = useNavigationContainerRef();
+
   return (
-    <SafeAreaView style= { {flex: 1} }>
-      <StatusBar style="auto" />
-      <Products />
-    </SafeAreaView>
+
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      
+      <SafeAreaProvider>
+    
+        <StatusBar style={'auto' as StatusBarStyle} />
+
+        <NavigationContainer
+          ref={navigatorRef => {
+            navigationRef.current = navigatorRef;
+          }}
+        >
+          <AppNavigator />
+        </NavigationContainer>
+
+      </SafeAreaProvider>
+    
+    </GestureHandlerRootView>
+
   );
 }
