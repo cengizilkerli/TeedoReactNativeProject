@@ -1,20 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Products from '_scenes/Products/Products.component';
+import { SafeAreaView } from 'react-native';
+
+import './gesture-handler';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Teedo React Native Eğitimi - Ödev 1</Text>
+    <SafeAreaView style= { {flex: 1} }>
       <StatusBar style="auto" />
-    </View>
+      <Products />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

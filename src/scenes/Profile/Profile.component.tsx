@@ -7,7 +7,7 @@ const Profile = () => {
 
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Profile</Text>
     </View>
   );
 };
